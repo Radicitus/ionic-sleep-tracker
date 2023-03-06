@@ -7,41 +7,46 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <div class="flex justify-center py-10 grid grid-flow-row auto-rows-max">
-    <p class="text-center">Stanford Sleepiness Entries:</p>
-    <table class="border-separate border border-slate-400" *ngIf="allSleepinessData">
+
+  <!-- STANFORD SLEEP -->
+
+  <div class="flex justify-center grid grid-flow-row auto-rows-max">
+    <p class="text-center text-xl py-6 md:text-3xl">Stanford Sleepiness Entries:</p>
+    <table class="border-separate border border-slate-400 table-auto max-w-2xl" *ngIf="allSleepinessData">
       <thead>
       <tr>
 <!--        <th class="px-24 py-10 content-center border border-slate-300" scope="col">ID</th>-->
-        <th class="border border-slate-300 md:px-24 sm:px-2" scope="col">Logged At</th>
-        <th class="border border-slate-300 md:px-24 sm:px-2" scope="col">Sleepiness</th>
+        <th class="border border-slate-300" scope="col">Logged At</th>
+        <th class="border border-slate-300" scope="col">Sleepiness</th>
       </tr>
       </thead>
       <tbody>
       <tr *ngFor="let s of allSleepinessData">
 <!--        <td class="border border-slate-300">{{s.id}}</td>-->
-        <td class="border border-slate-300 text-center">{{s.dateString()}}</td>
-        <td class="border border-slate-300 text-center">{{s.summaryString()}}</td>
+        <td class="border border-slate-300 text-center break-words p-2 md:px-14 lg:px-22">{{s.dateString()}}</td>
+        <td class="border border-slate-300 text-center break-words p-2 md:px-22 lg:px-22">{{s.summaryString()}}</td>
       </tr>
       </tbody>
     </table>
   </div>
 
-  <div class="flex justify-center py-10 grid grid-flow-row auto-rows-max">
-    <p class="text-center">Overnight Sleep Entries:</p>
-    <table class="border-separate border border-slate-400" *ngIf="allOvernightData">
+<!-- OVERNIGHT -->
+
+  <div class="flex justify-center grid grid-flow-row auto-rows-max">
+    <p class="text-center pt-10 pb-6 text-xl md:text-3xl">Overnight Sleep Entries:</p>
+    <table class="border-separate border border-slate-400 table-auto max-w-2xl" *ngIf="allOvernightData">
       <thead>
       <tr>
 <!--        <th class="px-24 py-10 content-center border border-slate-300" scope="col">ID</th>-->
-        <th class="border border-slate-300 md:px-24 sm:px-2" scope="col">Logged At</th>
-        <th class="border border-slate-300 md:px-24 sm:px-2" scope="col">Sleep Time</th>
+        <th class="border border-slate-300" scope="col">Logged At</th>
+        <th class="border border-slate-300" scope="col">Sleep Time</th>
       </tr>
       </thead>
       <tbody>
       <tr *ngFor="let s of allOvernightData">
 <!--        <td class="border border-slate-300">{{s.id}}</td>-->
-        <td class="border border-slate-300 text-center">{{s.dateString()}}</td>
-        <td class="border border-slate-300 text-center">{{s.summaryString()}}</td>
+        <td class="border border-slate-300 text-center break-words p-2 md:px-14 lg:px-22">{{s.dateString()}}</td>
+        <td class="border border-slate-300 text-center break-words p-2 md:px-14 lg:px-22">{{s.summaryString()}}</td>
       </tr>
       </tbody>
     </table>
