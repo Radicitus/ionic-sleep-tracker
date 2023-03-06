@@ -1,5 +1,6 @@
 import {Component} from '@angular/core';
 import {SleepService} from "./services/sleep.service";
+import {OvernightSleepData} from "./data/overnight-sleep-data";
 
 @Component({
   selector: 'app-root',
@@ -11,7 +12,11 @@ export class AppComponent {
   }
 
   ngOnInit() {
-    console.log(this.allSleepData);
+    console.log("APP: ", this.allSleepData);
+    this.sleepService.logOvernightData(
+      new OvernightSleepData(
+        new Date('February 20, 2021 23:11:00'), new Date('February 20, 2021 23:12:00')
+      ));
   }
 
   /* Ionic doesn't allow bindings to static variables, so this getter can be used instead. */
