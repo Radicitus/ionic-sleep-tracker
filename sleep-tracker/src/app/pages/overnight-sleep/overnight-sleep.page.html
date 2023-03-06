@@ -1,17 +1,21 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 1
+      Overnight Sleep
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <p>Today is: {{this.date.toLocaleDateString('en-US', {
+    weekday: 'long',
+    month: 'long',
+    day: 'numeric'
+  })}}</p>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+  <p>It is currently: {{this.date.toLocaleTimeString()}}</p>
+  <div>
+    <ion-button color="success" shape="round">Start</ion-button>
+    <ion-button color="danger" shape="round">Stop</ion-button>
+  </div>
 </ion-content>

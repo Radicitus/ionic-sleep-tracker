@@ -8,10 +8,17 @@ import {SleepService} from "../../services/sleep.service";
 })
 export class OvernightSleepPage {
 
-  constructor(public sleepService: SleepService) {}
+  date:Date;
+  constructor(public sleepService: SleepService) {
+    this.date = new Date();
+  }
 
   ngOnInit() {
     console.log("OVERNIGHT: ", SleepService.AllSleepData);
+  }
+
+  getCurrentDate() {
+
   }
 
 }
