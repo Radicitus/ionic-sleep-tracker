@@ -7,17 +7,31 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <div class="grid grid-col-7">
-    <ion-icon name="thumbs-down-outline"></ion-icon>
-    <ion-icon name="thumbs-up-outline"></ion-icon>
+  <div class="grid grid-cols-1 gap-4 place-content-center w-full h-full">
+    <div class="text-center">How would you rate your current sleepiness?</div>
+    <div class="space-x-2.5 flex justify-center">
+      <ion-icon class="text-2xl" name="thumbs-down-outline"></ion-icon>
+      <span class="text-4xl">2</span>
+      <span class="text-4xl">3</span>
+      <span class="text-4xl">4</span>
+      <span class="text-4xl">5</span>
+      <span class="text-4xl">6</span>
+      <ion-icon class="text-2xl" name="thumbs-up-outline"></ion-icon>
+    </div>
+    <ion-radio-group class="flex justify-center" value="1">
+      <ion-radio value="1"></ion-radio>
+      <ion-radio value="2"></ion-radio>
+      <ion-radio value="3"></ion-radio>
+      <ion-radio value="4"></ion-radio>
+      <ion-radio value="5"></ion-radio>
+      <ion-radio value="6"></ion-radio>
+      <ion-radio value="7"></ion-radio>
+    </ion-radio-group>
+    <div class="text-center pt-12">
+      Notes:
+      <ion-textarea placeholder="I'm feeling a crash after that coffee..." [autoGrow]="true"
+                    value="">
+      </ion-textarea>
+    </div>
   </div>
-  <ion-radio-group value="1">
-    <ion-radio value="1"></ion-radio>
-    <ion-radio value="2"></ion-radio>
-    <ion-radio value="3"></ion-radio>
-    <ion-radio value="4"></ion-radio>
-    <ion-radio value="5"></ion-radio>
-    <ion-radio value="6"></ion-radio>
-    <ion-radio value="7"></ion-radio>
-  </ion-radio-group>
 </ion-content>

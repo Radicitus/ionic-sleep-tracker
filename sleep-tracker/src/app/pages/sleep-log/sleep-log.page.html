@@ -13,15 +13,15 @@
       <thead>
       <tr>
 <!--        <th class="px-24 py-10 content-center border border-slate-300" scope="col">ID</th>-->
-        <th class="border border-slate-300" scope="col">Logged At</th>
-        <th class="border border-slate-300" scope="col">Sleepiness</th>
+        <th class="border border-slate-300 md:px-24 sm:px-2" scope="col">Logged At</th>
+        <th class="border border-slate-300 md:px-24 sm:px-2" scope="col">Sleepiness</th>
       </tr>
       </thead>
       <tbody>
       <tr *ngFor="let s of allSleepinessData">
 <!--        <td class="border border-slate-300">{{s.id}}</td>-->
-        <td class="border border-slate-300">{{s.dateString()}}</td>
-        <td class="border border-slate-300">{{s.summaryString()}}</td>
+        <td class="border border-slate-300 text-center">{{s.dateString()}}</td>
+        <td class="border border-slate-300 text-center">{{s.summaryString()}}</td>
       </tr>
       </tbody>
     </table>
@@ -33,15 +33,15 @@
       <thead>
       <tr>
 <!--        <th class="px-24 py-10 content-center border border-slate-300" scope="col">ID</th>-->
-        <th class="border border-slate-300" scope="col">Logged At</th>
-        <th class="border border-slate-300" scope="col">Sleep Time</th>
+        <th class="border border-slate-300 md:px-24 sm:px-2" scope="col">Logged At</th>
+        <th class="border border-slate-300 md:px-24 sm:px-2" scope="col">Sleep Time</th>
       </tr>
       </thead>
       <tbody>
       <tr *ngFor="let s of allOvernightData">
 <!--        <td class="border border-slate-300">{{s.id}}</td>-->
-        <td class="border border-slate-300">{{s.dateString()}}</td>
-        <td class="border border-slate-300">{{s.summaryString()}}</td>
+        <td class="border border-slate-300 text-center">{{s.dateString()}}</td>
+        <td class="border border-slate-300 text-center">{{s.summaryString()}}</td>
       </tr>
       </tbody>
     </table>
