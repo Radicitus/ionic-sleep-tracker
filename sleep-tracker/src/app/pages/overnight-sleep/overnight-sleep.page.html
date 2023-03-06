@@ -1,21 +1,28 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Overnight Sleep
-    </ion-title>
+    <ion-title> Overnight Sleep</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <p>Today is: {{this.date.toLocaleDateString('en-US', {
-    weekday: 'long',
-    month: 'long',
-    day: 'numeric'
-  })}}</p>
+  <div class="grid place-content-center w-full h-full gap-6">
+    <div class="text-center">
+      <span class="text-4xl">
+        {{this.date.toLocaleDateString('en-US', { weekday: 'long', month:
+        'long', day: 'numeric' })}}
+      </span>
+    </div>
 
-  <p>It is currently: {{this.date.toLocaleTimeString()}}</p>
-  <div>
-    <ion-button color="success" shape="round">Start</ion-button>
-    <ion-button color="danger" shape="round">Stop</ion-button>
+    <div class="text-center pb-10">
+      <span class="text-2xl">
+        {{this.date.toLocaleTimeString('en-US', {hour: '2-digit', minute:
+        '2-digit'})}}
+      </span>
+    </div>
+    <div>You are not currently logging your sleep</div>
+    <div class="text-center">
+      <ion-button color="success" shape="round">Start</ion-button>
+      <ion-button disabled="true" color="danger" shape="round">Stop</ion-button>
+    </div>
   </div>
 </ion-content>
