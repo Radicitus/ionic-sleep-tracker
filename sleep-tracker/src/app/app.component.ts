@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
+import {SleepService} from "./services/sleep.service";
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,15 @@ import { Component } from '@angular/core';
   styleUrls: ['app.component.scss'],
 })
 export class AppComponent {
-  constructor() {}
+  constructor(public sleepService: SleepService) {
+  }
+
+  ngOnInit() {
+    console.log(this.allSleepData);
+  }
+
+  /* Ionic doesn't allow bindings to static variables, so this getter can be used instead. */
+  get allSleepData() {
+    return SleepService.AllSleepData;
+  }
 }
