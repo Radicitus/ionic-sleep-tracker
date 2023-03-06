@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {SleepService} from "../services/sleep.service";
+import {SleepService} from "../../services/sleep.service";
 
 @Component({
   selector: 'app-overnight-sleep',

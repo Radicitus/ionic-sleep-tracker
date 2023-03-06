@@ -1,21 +1,21 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { IonicModule } from '@ionic/angular';
 
-import { ExploreContainerComponentModule } from '../explore-container/explore-container.module';
+import { ExploreContainerComponentModule } from '../../components/explore-container/explore-container.module';
 
-import { OvernightSleepPage } from './overnight-sleep.page';
+import { SleepLogPage } from './sleep-log.page';
 
-describe('Tab1Page', () => {
-  let component: OvernightSleepPage;
-  let fixture: ComponentFixture<OvernightSleepPage>;
+describe('Tab3Page', () => {
+  let component: SleepLogPage;
+  let fixture: ComponentFixture<SleepLogPage>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [OvernightSleepPage],
+      declarations: [SleepLogPage],
       imports: [IonicModule.forRoot(), ExploreContainerComponentModule]
     }).compileComponents();
 
-    fixture = TestBed.createComponent(OvernightSleepPage);
+    fixture = TestBed.createComponent(SleepLogPage);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

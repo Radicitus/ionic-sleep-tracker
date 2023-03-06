@@ -9,15 +9,15 @@ const routes: Routes = [
     children: [
       {
         path: 'overnight-sleep',
-        loadChildren: () => import('../overnight-sleep/overnight-sleep.module').then(m => m.Tab1PageModule)
+        loadChildren: () => import('../pages/overnight-sleep/overnight-sleep.module').then(m => m.Tab1PageModule)
       },
       {
         path: 'sleepiness',
-        loadChildren: () => import('../sleepiness/tab2.module').then(m => m.Tab2PageModule)
+        loadChildren: () => import('../pages/sleepiness/sleepiness.module').then(m => m.Tab2PageModule)
       },
       {
         path: 'sleep-log',
-        loadChildren: () => import('../sleep-log/tab3.module').then(m => m.Tab3PageModule)
+        loadChildren: () => import('../pages/sleep-log/sleep-log.module').then(m => m.Tab3PageModule)
       },
       {
         path: '',
