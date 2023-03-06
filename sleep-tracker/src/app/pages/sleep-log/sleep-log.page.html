@@ -9,12 +9,12 @@
 <ion-content [fullscreen]="true">
   <div class="flex justify-center py-10 grid grid-flow-row auto-rows-max">
     <p class="text-center">Stanford Sleepiness Entries:</p>
-    <table class="border-separate border border-slate-400 w-full" *ngIf="allSleepinessData">
+    <table class="border-separate border border-slate-400" *ngIf="allSleepinessData">
       <thead>
       <tr>
 <!--        <th class="px-24 py-10 content-center border border-slate-300" scope="col">ID</th>-->
         <th class="border border-slate-300" scope="col">Logged At</th>
-        <th class="border border-slate-300" scope="col">Sleep Summary</th>
+        <th class="border border-slate-300" scope="col">Sleepiness</th>
       </tr>
       </thead>
       <tbody>
@@ -29,12 +29,12 @@
 
   <div class="flex justify-center py-10 grid grid-flow-row auto-rows-max">
     <p class="text-center">Overnight Sleep Entries:</p>
-    <table class="border-separate border border-slate-400 w-full" *ngIf="allOvernightData">
+    <table class="border-separate border border-slate-400" *ngIf="allOvernightData">
       <thead>
       <tr>
 <!--        <th class="px-24 py-10 content-center border border-slate-300" scope="col">ID</th>-->
         <th class="border border-slate-300" scope="col">Logged At</th>
-        <th class="border border-slate-300" scope="col">Sleep Summary</th>
+        <th class="border border-slate-300" scope="col">Sleep Time</th>
       </tr>
       </thead>
       <tbody>
