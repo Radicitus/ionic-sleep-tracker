@@ -34,19 +34,19 @@ Raffi and Cam. Everything.
 
 
 5. Is there anything special we need to know in order to run your code?
-No
+In order to experience the native device haptic feedback, you will need to build the project for iOS and run it in developer mode on a physical device.
 
 
 --Aim for no more than two sentences for each of the following questions.--
 
 
 6. Did you design your app with a particular type of user in mind? If so, whom?
-No. We just designed it with an everyday average user in mind. Our app is easy to use so people of all ages can use
-and understand how the app works.
+No. We just designed it with power users in mind who like to keep track of the smallest details. Our app is easy to use so people of all ages can use
+and understand how the app works, but we provide the ability to provide notes on the users' sleepiness so they can look back on why they felt the way they did.
 
 
 7. Did you design your app specifically for iOS or Android, or both?
-iOS
+iOS mobile first, then web.
 
 
 8. How can a person log overnight sleep in your app? Why did you choose to support logging overnight sleep in this way?
@@ -72,7 +72,8 @@ Native Device Resource
 
 12. If you used a native device resource, what feature did you add? How does this feature change the app's experience for a user?
 
-We added haptics. This does not change the user experience.
+We added haptics. We make use of haptics everywhere in the app, from changing tabs to changing radio button selection to starting and stopping the overnight sleep timer.
+One of the key advantages of a mobile app is using the physical sensations of holding a device in hand, which are not present on a web app thus we wanted to deepen the physical connection with the users' in that way.
 
 
 13. If you backed up logged data, where does it back up to?
