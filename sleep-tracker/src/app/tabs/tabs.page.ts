@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {Haptics, ImpactStyle} from "@capacitor/haptics";
 
 @Component({
   selector: 'app-tabs',
@@ -8,5 +9,13 @@ import { Component } from '@angular/core';
 export class TabsPage {
 
   constructor() {}
+
+  onTabChange() {
+    const hapticsImpactLight = async () => {
+      await Haptics.impact({ style: ImpactStyle.Light });
+    };
+
+    hapticsImpactLight();
+  }
 
 }

@@ -26,13 +26,49 @@ export class SleepService {
         new Date('February 18, 2021 09:25:00')
       )
     );
+
     this.logSleepinessData(
-      new StanfordSleepinessData(3, "", new Date('February 19, 2021 14:38:00'))
+      new StanfordSleepinessData(
+        3,
+        'I felt pretty good after that coffee!',
+        new Date('February 19, 2021 14:38:00')
+      )
     );
+
+    this.logSleepinessData(
+      new StanfordSleepinessData(
+        3,
+        "Nevermind, I'm feeling the crash now...",
+        new Date('February 19, 2021 16:38:00')
+      )
+    );
+
+    this.logSleepinessData(
+      new StanfordSleepinessData(
+        3,
+        'Raffi annoyed me.',
+        new Date('February 19, 2021 18:36:00')
+      )
+    );
+
     this.logOvernightData(
       new OvernightSleepData(
         new Date('February 20, 2021 23:11:00'),
         new Date('February 21, 2021 08:03:00')
+      )
+    );
+
+    this.logOvernightData(
+      new OvernightSleepData(
+        new Date('February 22, 2021 22:11:00'),
+        new Date('February 23, 2021 07:03:00')
+      )
+    );
+
+    this.logOvernightData(
+      new OvernightSleepData(
+        new Date('February 24, 2021 23:59:00'),
+        new Date('February 25, 2021 10:03:00')
       )
     );
   }

@@ -3,6 +3,7 @@ import { SleepService } from '../../services/sleep.service';
 import { StanfordSleepinessData } from '../../data/stanford-sleepiness-data';
 import { ToastController } from '@ionic/angular';
 import { interval } from 'rxjs';
+import {Haptics, ImpactStyle} from "@capacitor/haptics";
 
 @Component({
   selector: 'app-sleepiness',
@@ -31,12 +32,15 @@ export class SleepinessPage {
       new StanfordSleepinessData(this.scaleValue, this.notes)
     );
 
+    const hapticsImpactMedium = async () => {
+      await Haptics.impact({ style: ImpactStyle.Medium });
+    };
+
+    hapticsImpactMedium();
     this.presentToast();
 
-    setTimeout(() => {
-      this.scaleValue = 1;
-      this.notes = '';
-    }, 1800);
+    this.scaleValue = 1;
+    this.notes = '';
   }
 
   async presentToast() {
@@ -64,5 +68,21 @@ export class SleepinessPage {
       hour: '2-digit',
       minute: '2-digit',
     });
+  }
+
+  onSelectionChange() {
+    const hapticsImpactLight = async () => {
+      await Haptics.impact({ style: ImpactStyle.Light });
+    };
+
+    hapticsImpactLight();
+  }
+
+  onTap() {
+    const hapticsImpactMedium = async () => {
+      await Haptics.impact({ style: ImpactStyle.Medium });
+    };
+
+    hapticsImpactMedium();
   }
 }
