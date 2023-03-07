@@ -20,6 +20,7 @@
           <!--        <th class="px-24 py-10 content-center border border-slate-300" scope="col">ID</th>-->
           <th class="border border-slate-300 py-2" scope="col">Logged At</th>
           <th class="border border-slate-300 py-2" scope="col">Sleepiness</th>
+          <th class="border border-slate-300 py-2" scope="col">Notes</th>
         </tr>
       </thead>
       <tbody>
@@ -37,6 +38,11 @@
             class="border border-slate-300 text-center break-words p-2 md:px-22 lg:px-22"
           >
             {{s.summaryString()}}
+          </td>
+          <td
+            class="border border-slate-300 text-center break-words p-2 md:px-22 lg:px-22"
+          >
+            {{s.getNotes()}}
           </td>
         </tr>
       </tbody>

@@ -17,8 +17,4 @@ export class OvernightSleepPage {
     console.log("OVERNIGHT: ", SleepService.AllSleepData);
   }
 
-  getCurrentDate() {
-
-  }
-
 }

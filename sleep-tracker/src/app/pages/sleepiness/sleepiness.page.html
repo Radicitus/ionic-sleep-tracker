@@ -28,7 +28,7 @@
         name="thumbs-up-outline"
       ></ion-icon>
     </div>
-    <ion-radio-group class="flex justify-center" value="{{scaleValue}}">
+    <ion-radio-group class="flex justify-center" [(ngModel)]="scaleValue" value="{{scaleValue}}">
       <ion-radio value="1"></ion-radio>
       <ion-radio value="2"></ion-radio>
       <ion-radio value="3"></ion-radio>
@@ -43,11 +43,12 @@
         placeholder="I'm feeling a crash after that coffee..."
         [autoGrow]="true"
         value="{{notes}}"
+        [(ngModel)]="notes"
       >
       </ion-textarea>
     </div>
     <div class="text-center">
-      <ion-button shape="round">Save</ion-button>
+      <ion-button (click)="saveStanfordSleepData()" shape="round">Save</ion-button>
     </div>
   </div>
 </ion-content>
