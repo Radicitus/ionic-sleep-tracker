@@ -7,22 +7,37 @@
 <ion-content [fullscreen]="true">
   <div class="grid place-content-center w-full h-full gap-6">
     <div class="text-center">
-      <span class="text-4xl">
-        {{this.date.toLocaleDateString('en-US', { weekday: 'long', month:
-        'long', day: 'numeric' })}}
-      </span>
+      <span class="text-4xl"> {{day}} </span>
     </div>
 
     <div class="text-center pb-10">
-      <span class="text-2xl">
-        {{this.date.toLocaleTimeString('en-US', {hour: '2-digit', minute:
-        '2-digit'})}}
-      </span>
+      <span class="text-2xl"> {{time}} </span>
     </div>
-    <div class="italic">You are not currently logging your sleep</div>
+    <div
+      *ngIf="isSleeping"
+      class="break-normal text-center max-w-screen-md px-10"
+    >
+      You started sleeping on <strong>{{sessionStartDate}}</strong> at
+      <strong>{{sessionStartTime}}</strong>.
+    </div>
+    <div class="italic text-center" [ngClass]="{'animate-pulse' : isSleeping}">
+      {{statusMessage}}
+    </div>
     <div class="text-center">
-      <ion-button color="success" shape="round">Start</ion-button>
-      <ion-button disabled="true" color="danger" shape="round">Stop</ion-button>
+      <ion-button
+        (click)="startOvernightSleep()"
+        [disabled]="isSleeping"
+        color="success"
+        shape="round"
+        >Start
+      </ion-button>
+      <ion-button
+        (click)="endOvernightSleep()"
+        [disabled]="!isSleeping"
+        color="danger"
+        shape="round"
+        >Stop
+      </ion-button>
     </div>
   </div>
 </ion-content>

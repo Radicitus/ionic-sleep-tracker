@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { SleepService } from '../../services/sleep.service';
 import { StanfordSleepinessData } from '../../data/stanford-sleepiness-data';
 import { ToastController } from '@ionic/angular';
+import { interval } from 'rxjs';
 
 @Component({
   selector: 'app-sleepiness',
@@ -10,6 +11,7 @@ import { ToastController } from '@ionic/angular';
 })
 export class SleepinessPage {
   date: Date;
+  time: string = '';
   scaleValue: number = 1;
   notes: string = '';
 
@@ -18,6 +20,10 @@ export class SleepinessPage {
     private toastController: ToastController
   ) {
     this.date = new Date();
+
+    this.updateTime();
+
+    this.setAutoUpdateTime();
   }
 
   saveStanfordSleepData() {
@@ -29,7 +35,7 @@ export class SleepinessPage {
 
     setTimeout(() => {
       this.scaleValue = 1;
-      this.notes = "";
+      this.notes = '';
     }, 1800);
   }
 
@@ -38,9 +44,25 @@ export class SleepinessPage {
       message: 'Saved!',
       duration: 1500,
       position: 'top',
-      icon: 'checkmark-circle-outline'
+      icon: 'checkmark-circle-outline',
     });
 
     await toast.present();
+  }
+
+  setAutoUpdateTime() {
+    const minuteCounter = interval(10 * 1000);
+    minuteCounter.subscribe(() => {
+      // console.log('count');
+      this.updateTime();
+    });
+  }
+
+  updateTime() {
+    this.date = new Date();
+    this.time = this.date.toLocaleTimeString('en-US', {
+      hour: '2-digit',
+      minute: '2-digit',
+    });
   }
 }

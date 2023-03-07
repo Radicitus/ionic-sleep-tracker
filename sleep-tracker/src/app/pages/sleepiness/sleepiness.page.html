@@ -7,9 +7,8 @@
 <ion-content [fullscreen]="true">
   <div class="grid grid-cols-1 gap-4 place-content-center w-full h-full">
     <div class="text-center pb-10">
-      <span class="text-4xl">
-        {{this.date.toLocaleTimeString('en-US', { hour: '2-digit', minute:
-        '2-digit' })}}
+      <span class="text-4xl animate-pulse">
+        {{time}}
       </span>
     </div>
     <div class="text-center">How would you rate your current sleepiness?</div>
