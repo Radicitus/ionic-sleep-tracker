@@ -1,24 +1,34 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Stanford Sleepiness Scale
-    </ion-title>
+    <ion-title> Stanford Sleepiness Scale</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <div class="grid grid-cols-1 gap-4 place-content-center w-full h-full">
+    <div class="text-center pb-10">
+      <span class="text-4xl">
+        {{this.date.toLocaleTimeString('en-US', { hour: '2-digit', minute:
+        '2-digit' })}}
+      </span>
+    </div>
     <div class="text-center">How would you rate your current sleepiness?</div>
     <div class="space-x-2.5 flex justify-center">
-      <ion-icon class="text-2xl self-center" name="thumbs-down-outline"></ion-icon>
+      <ion-icon
+        class="text-2xl self-center"
+        name="thumbs-down-outline"
+      ></ion-icon>
       <span class="text-4xl">2</span>
       <span class="text-4xl">3</span>
       <span class="text-4xl">4</span>
       <span class="text-4xl">5</span>
       <span class="text-4xl">6</span>
-      <ion-icon class="text-2xl self-center" name="thumbs-up-outline"></ion-icon>
+      <ion-icon
+        class="text-2xl self-center"
+        name="thumbs-up-outline"
+      ></ion-icon>
     </div>
-    <ion-radio-group class="flex justify-center" value="1">
+    <ion-radio-group class="flex justify-center" value="{{scaleValue}}">
       <ion-radio value="1"></ion-radio>
       <ion-radio value="2"></ion-radio>
       <ion-radio value="3"></ion-radio>
@@ -29,9 +39,15 @@
     </ion-radio-group>
     <div class="text-center pt-12">
       Notes:
-      <ion-textarea placeholder="I'm feeling a crash after that coffee..." [autoGrow]="true"
-                    value="">
+      <ion-textarea
+        placeholder="I'm feeling a crash after that coffee..."
+        [autoGrow]="true"
+        value="{{notes}}"
+      >
       </ion-textarea>
+    </div>
+    <div class="text-center">
+      <ion-button shape="round">Save</ion-button>
     </div>
   </div>
 </ion-content>

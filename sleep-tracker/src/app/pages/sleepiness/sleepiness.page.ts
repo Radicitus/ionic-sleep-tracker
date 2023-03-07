@@ -7,6 +7,12 @@ import { Component } from '@angular/core';
 })
 export class SleepinessPage {
 
-  constructor() {}
+  date:Date;
+  scaleValue:number = 1;
+  notes:string = "";
+
+  constructor() {
+    this.date = new Date();
+  }
 
 }
