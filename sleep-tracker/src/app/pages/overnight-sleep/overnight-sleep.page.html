@@ -25,14 +25,14 @@
     </div>
     <div class="text-center">
       <ion-button
-        (click)="startOvernightSleep()"
+        (click)="startOvernightSleep(); onTap()"
         [disabled]="isSleeping"
         color="success"
         shape="round"
         >Start
       </ion-button>
       <ion-button
-        (click)="endOvernightSleep()"
+        (click)="endOvernightSleep(); onTap()"
         [disabled]="!isSleeping"
         color="danger"
         shape="round"

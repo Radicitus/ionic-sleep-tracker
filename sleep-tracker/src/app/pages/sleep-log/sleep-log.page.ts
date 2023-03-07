@@ -1,6 +1,5 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component} from '@angular/core';
 import {SleepService} from "../../services/sleep.service";
-import {SleepData} from "../../data/sleep-data";
 
 @Component({
   selector: 'app-sleep-log',

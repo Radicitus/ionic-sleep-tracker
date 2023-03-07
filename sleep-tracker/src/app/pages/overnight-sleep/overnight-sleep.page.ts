@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import { SleepService } from '../../services/sleep.service';
 import { OvernightSleepData } from '../../data/overnight-sleep-data';
-import { interval, min } from 'rxjs';
+import { interval } from 'rxjs';
+import { Haptics, ImpactStyle } from '@capacitor/haptics';
 
 @Component({
   selector: 'app-overnight-sleep',
@@ -81,5 +82,13 @@ export class OvernightSleepPage {
       hour: '2-digit',
       minute: '2-digit',
     });
+  }
+
+  onTap() {
+    const hapticsImpactMedium = async () => {
+      await Haptics.impact({ style: ImpactStyle.Medium });
+    };
+
+    hapticsImpactMedium();
   }
 }
