@@ -1,7 +1,7 @@
 import { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
-  appId: 'io.ionic.starter',
+  appId: 'circle.app.sleep',
   appName: 'sleep-tracker',
   webDir: 'www',
   bundledWebRuntime: false
