@@ -55,8 +55,8 @@ export class SleepinessPage {
   }
 
   setAutoUpdateTime() {
-    const minuteCounter = interval(10 * 1000);
-    minuteCounter.subscribe(() => {
+    const secondCounter = interval(1000);
+    secondCounter.subscribe(() => {
       // console.log('count');
       this.updateTime();
     });

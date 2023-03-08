@@ -59,8 +59,8 @@ export class OvernightSleepPage {
   }
 
   setAutoUpdateDateTime() {
-    const minuteCounter = interval(10 * 1000);
-    minuteCounter.subscribe(() => {
+    const secondCounter = interval(1000);
+    secondCounter.subscribe(() => {
       // console.log('count');
       this.updateDay();
       this.updateTime();
